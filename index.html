@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="biodata.css" href="style.css">
+    <title>3sum</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+      <h1>check in console</h1>
+    <script>
+        function sumOf3(arr, target){
+            let len = arr.length;
+            let closestSum = 10000000;
+            for(let i=0; i<len-2; i++){
+                for(let j=i+1; j<len-1; j++){
+                    for(let k=j+1; k<len; k++){
+                        let currSum = arr[i]+arr[j]+arr[k];
+                        if(Math.abs(currSum-target)<Math.abs(closestSum-target)){
+                        closestSum = currSum ;
+                        }
+                    }
+                }
+            }
+            return closestSum;
+        }
+        console.log(sumOf3([-1, 4, 2, 4], 10));
+    </script>
+    </body>
+    </html>
+    
+                   
